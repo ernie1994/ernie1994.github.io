@@ -4,48 +4,95 @@
 <head>
     <meta charset="UTF-8">
     <title>Ernesto Garcia's Portfolio</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 
 <body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="assets/javascript/app.js"></script>
+    <div class="container-fluid">
 
-    <header>
-        <h1>Ernesto Garcia</h1>
+        <div class="row p-5" id="stars">
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="jumbotron bg-transparent">
+                            <h1 class="display-4">My name is <strong>Ernesto Garcia</strong>.<br>I'm a full stack
+                                developer.
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 d-flex justify-content-center">
+                        <button id="myWork" type="button" class="btn btn-outline-info align-self-center">My
+                            Work</button>
 
-        <nav>
-            <a href="contact.html">Contact</a>
-            <a href="portfolio.html">Portfolio</a>
-            <a href="index.html">About</a>
-        </nav>
+                    </div>
+                </div>
 
-    </header>
+            </div>
+        </div>
 
-    <div>
+        <div class="row" id="portfolio">
+            <div class="col-12">
+                <h1>PORTFOLIO</h1>
+            </div>
+        </div>
 
-        <section>
+        <div class="row p-5 d-flex justify-content-center">
 
-            <h2>About Me</h2>
-            <img id="profile-pic" src="/assets/images/graduation-pic.png" alt="Ernesto Garcia's Graduation">
-            <p class="paragraph-content">Ernesto Garcia was born and raised in the small agriculture-dominant California
-                town
-                of Los Banos. He graduated from Los Banos High School as valedictorian and attended UCLA to pursue a
-                degree in
-                neuroscience. While at UCLA, he served the community as a volunteer clinic assistant and laboratory
-                assistant.</p>
-            <p class="paragraph-content">After graduating from UCLA with a biological background, Ernesto decided to
-                pursue a career in the tech industry. His first step on this journey was to teach himself iOS
-                programming.</p>
-            <p class="paragraph-content">Ernesto enjoyed the coding experience so much that he decided to become a
-                full-stack web developer. He is currently enrolled in the UC Davis Coding Bootcamp to fulfill this goal.
-            </p>
-        </section>
+            <div class="col-lg-4 col-md-6">
+                <div class="card" style="width: 18rem;">
+                    <img src="./assets/images/giphy.png" class="card-img-top" alt="gif">
+                    <div class="card-body">
+                        <h5 class="card-title">Gif Search</h5>
+                        <p class="card-text">Find cool gifs, powered by Giphy!</p>
+                        <a href="https://ernie1994.github.io/gifTastic/" class="btn btn-primary">Open App</a>
+                        <a href="https://github.com/ernie1994/gifTastic" class="btn btn-dark">Github Code</a>
+                    </div>
+                </div>
 
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="card" style="width: 18rem;">
+                    <img src="./assets/images/event.jpg" class="card-img-top" alt="gif">
+                    <div class="card-body">
+                        <h5 class="card-title">Event Me</h5>
+                        <p class="card-text">Plan your next event!</p>
+                        <p class="card-text">Look up hotels near your next destination</p>
+                        <a href="https://medricr.github.io/group-project/" class="btn btn-primary">Open App</a>
+                        <a href="https://github.com/medricr/group-project" class="btn btn-dark">GitHub Code</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="card" style="width: 18rem;">
+                    <img src="./assets/images/Ned_Stark.jpg" class="card-img-top" alt="gif">
+                    <div class="card-body">
+                        <h5 class="card-title">Game of Thrones Trivia</h5>
+                        <p class="card-text">Test your Game of Thrones knowledge!</p>
+                        <a href="https://ernie1994.github.io/TriviaGame/" class="btn btn-primary">Open App</a>
+                        <a href="https://github.com/ernie1994/TriviaGame" class="btn btn-dark">GitHub Code</a>
+                    </div>
+                </div>
+            </div>
+        </div>
 
+        <div class="row p-5" id="contact">
+            <div class="col-12">
+                <h1>CONTACT</h1>
+                <br>
+                <h6>ernie1994@gmail.com</h6>
+                <h6>(209)592-8539</h6>
+                <a href="https://github.com/ernie1994">
+                    <h6>GitHub Portfolio</h6>
+                </a>
+            </div>
+        </div>
     </div>
 
-    <footer>
-        Copyright &copy;
-    </footer>
 
 </body>
 
