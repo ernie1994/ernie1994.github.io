@@ -1,12 +1,12 @@
+html,body {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
 h1 {
     text-align: center;
     font-weight: bold;
     margin-top: 20px;
-}
-
-a,h6 {
-    text-align: center;
-    color:white;
 }
 
 .jumbotron h1 {
@@ -14,14 +14,17 @@ a,h6 {
 }
 
 #stars {
-    background-image: url("../images/starry-night.jpg")
+    background-image: url("../images/starry-night.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 60%;
 }
 
 #myWork {
     text-align: center;
     color:white;
     border-color: white;
-    font-weight: bolder;
+    background-color: black;
 }
 
 #contact {
@@ -35,4 +38,53 @@ a,h6 {
 
 .card {
     margin-top: 20px;
+}
+
+div {
+    text-align: center;
+}
+
+#test {
+    background-color: yellow;
+}
+
+a {
+    margin-right: 5px;
+    color: white;
+    text-align: center;
+}
+
+h6 {
+    text-align: center;
+}
+
+#contact > * {
+    color:white;
+}
+
+.w-100 {
+    background-color: lightgray;
+    height: 1px;
+}
+
+.project-descr {
+    color: gray;
+}
+
+h2 {
+    font-weight: bolder;
+}
+
+.nav-item:hover {
+    cursor: pointer;
+}
+
+.nav-item > a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+.nav-item > * {
+    color:white;
+    text-align: center;
 }
