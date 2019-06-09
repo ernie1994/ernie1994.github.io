@@ -139,21 +139,6 @@ $(document).ready(function () {
         $("form").remove();
     });
 
-    // $("#phone").keypress(() => {
-    //     var str = $("#phone").val();
-    //     var newStr = "";
-
-    //     var regex = new RegExp("^[0-9]");
-
-    //     for (var i = 0; i < str.length; i++) {
-    //         if (regex.test(str[i])) {
-    //             newStr += str[i];
-    //         }
-    //     }
-
-    //     $("#phone").val(newStr);
-    // });
-
     $(document).scroll(() => {
         $(".project").each(function (_index, element) {
             if (element.getBoundingClientRect().top <= window.innerHeight) {
