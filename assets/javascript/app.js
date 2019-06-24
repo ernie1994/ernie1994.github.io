@@ -2,6 +2,13 @@ $(document).ready(function () {
 
     var projects = [
         {
+            image: "burger.png",
+            title: "Eat-Da-Burger",
+            description: "Pretend you're eating tasty burgers!",
+            appUrl: "https://burger67.herokuapp.com/",
+            githubUrl: "https://github.com/ernie1994/burger"
+        },
+        {
             image: "giphy.png",
             title: "Gif Search",
             description: "Find cool gifs, powered by Giphy!",
@@ -125,18 +132,67 @@ $(document).ready(function () {
         });
     });
 
-    $("#submit").click(() => {
+    $("#submit").click((event) => {
         event.preventDefault();
 
-        var phoneDigits = $("#phone").val();
+        var phone = $("#phone").val();
 
-        var phone = "(" + phoneDigits.slice(0, 3) + ")" + phoneDigits.slice(3, 6) + "-" + phoneDigits.slice(6);
+        var url = "mailto:ernesto.garcia.lb@gmail.com?subject=" + encodeURIComponent("Job Offer") + "&body=" + encodeURIComponent($("#message").val().trim()) + encodeURIComponent(" \n \nCall or text me at ") + encodeURIComponent(phone) + "!";
 
-        var url = "mailto:ernesto.garcia.lb@gmail.com?subject=" + encodeURIComponent("Job Offer") + "&body=" + encodeURIComponent($("#message").val()) + encodeURIComponent(" \n \nCall or text me at ") + encodeURIComponent(phone) + "!";
+        window.open(url, "_parent");
 
-        window.open(url);
+        $("form").empty().append("<h2>Thank you</h2>");
+    });
 
-        $("form").remove();
+    $("#phone").keypress((event) => {
+        var key = event.key;
+        var regex = new RegExp("^[0-9]*$");
+
+        var text = ($("#phone")).val();
+
+        var number = text
+            .replace("(", "")
+            .replace(")", "")
+            .replace("-", "");
+
+        switch (key) {
+            case "(":
+                return number.length === 0 && text.indexOf(key) === -1;
+            case ")":
+                return number.length === 3 && text.indexOf(key) === -1;
+            case "-":
+                return number.length === 6 && text.indexOf(key) === -1;
+            default:
+                return (regex.test(key));
+        }
+    });
+
+    $("#phone").keyup((event) => {
+        if (event.key === "Backspace") { return; }
+
+        var number = ($("#phone"))
+            .val()
+            .replace("(", "")
+            .replace(")", "")
+            .replace("-", "");
+
+
+        if (number.length > 5) {
+            number = "(" + number.slice(0, 3) + ")" + number.slice(3, 6) + "-" + number.slice(6);
+        }
+        else if (number.length > 2) {
+            number = "(" + number.slice(0, 3) + ")" + number.slice(3, number.length);
+        }
+        else if (number.length > 0) {
+            number = "(" + number.slice(0, number.length);
+        }
+        else if (number.length === 0) {
+            number = "(";
+        }
+
+        console.log("The key is " + event.key);
+
+        $("#phone").val(number);
     });
 
     $(document).scroll(() => {
