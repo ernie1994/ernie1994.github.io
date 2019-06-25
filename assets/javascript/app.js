@@ -53,14 +53,14 @@ $(document).ready(function () {
                 .addClass("row justify-content-center justify-content-md-start");
 
             var $imgCol = $("<div>")
-                .addClass("col-md-6 d-flex justify-content-center justify-content-md-end");
+                .addClass("col-12 col-md-6 d-flex justify-content-center justify-content-md-end");
 
             var $img = $("<img>")
                 .addClass("img-fluid img-thumbnail")
                 .attr("src", "./assets/images/" + proj.image);
 
             var $projectInfo = $("<div>")
-                .addClass("project-info col-md-6 text-center text-md-left")
+                .addClass("project-info col-12 col-md-6 text-center text-md-left")
                 .append("<br>")
                 .append($("<h2>")
                     .html(proj.title))
@@ -137,7 +137,7 @@ $(document).ready(function () {
 
         var phone = $("#phone").val();
 
-        var url = "mailto:ernesto.garcia.lb@gmail.com?subject=" + encodeURIComponent("Job Offer") + "&body=" + encodeURIComponent($("#message").val().trim()) + encodeURIComponent(" \n \nCall or text me at ") + encodeURIComponent(phone) + "!";
+        var url = "mailto:ernesto.garcia.lb@gmail.com?subject=" + encodeURIComponent("Job Offer") + "&body=" + encodeURIComponent($("#message").val().trim()) + encodeURIComponent(" \n \n Call or text me at ") + encodeURIComponent(phone) + "!";
 
         window.open(url, "_parent");
 
