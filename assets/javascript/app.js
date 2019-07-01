@@ -135,13 +135,24 @@ $(document).ready(function () {
     $("#submit").click((event) => {
         event.preventDefault();
 
-        var phone = $("#phone").val();
+        var nameValid = $("#name").get()[0].checkValidity();
 
-        var url = "mailto:ernesto.garcia.lb@gmail.com?subject=" + encodeURIComponent("Job Offer") + "&body=" + encodeURIComponent($("#message").val().trim()) + encodeURIComponent(" \n \n Call or text me at ") + encodeURIComponent(phone) + "!";
+        var emailValid = $("#email").get()[0].checkValidity();
 
-        window.open(url, "_parent");
+        var phoneValid = $("#phone").get()[0].checkValidity();
 
-        $("form").empty().append("<h2>Thank you</h2>");
+        if (nameValid && emailValid && phoneValid) {
+            var phone = $("#phone").val();
+
+            var url = "mailto:ernesto.garcia.lb@gmail.com?subject=" + encodeURIComponent("Job Offer") + "&body=" + encodeURIComponent($("#message").val().trim()) + encodeURIComponent(" \n \n Call or text me at ") + encodeURIComponent(phone) + "!";
+
+            window.open(url, "_parent");
+
+            $("input,textarea").val("");
+        }
+        else {
+            $("form").addClass("was-validated");
+        }
     });
 
     $("#phone").keypress((event) => {
@@ -190,9 +201,15 @@ $(document).ready(function () {
             number = "(";
         }
 
-        console.log("The key is " + event.key);
-
         $("#phone").val(number);
+
+        errorMessage = "";
+
+        if (number.length !== 13) {
+            errorMessage = "Invalid phone number";
+        }
+        $("#phone").get()[0].setCustomValidity(errorMessage);
+
     });
 
     $(document).scroll(() => {

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Ernesto Garcia's Portfolio</title>
+    <title>Ernesto Garcia</title>
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
@@ -78,21 +78,27 @@
 
         <div class="row p-5 d-flex justify-content-center" id="contact">
             <div id="contact-col" class="col-12 col-md-8 col-lg-6">
-                <h1>CONTACT</h1>
+                <img id="personal-pic" src="./assets/images/graduation-pic-square.png">
+                <h1 style="text-align: left; margin-top: 10%; padding-left: 45%; background-color: black">CONTACT</h1>
                 <br>
-                <form>
+                <form novalidate>
                     <div class="form-group">
-                        <input type="name" class="form-control" id="name" placeholder="Name">
+                        <input type="name" class="form-control" id="name" placeholder="Name" autofocus required>
+                        <div class="invalid-feedback">Name required</div>
                     </div>
                     <div class="form-group">
-                        <input type="email" class="form-control" id="email" placeholder="Email">
+                        <input type="email" class="form-control" id="email" placeholder="Email" required>
+                        <div class="invalid-feedback">Email required</div>
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" id="phone" placeholder="Phone Number" maxlength="13">
+                        <input type="text" class="form-control" id="phone" placeholder="Phone Number" minlength=13
+                            maxlength=13 required>
+                        <div class="invalid-feedback">Phone number required (XXX) XXX-XXXX</div>
+
                     </div>
                     <div class="form-group">
-                        <textarea type="text" class="form-control" id="message" placeholder="Message" cols="1"
-                            rows="5"></textarea>
+                        <textarea type="text" class="form-control" id="message" placeholder="Message" cols="1" rows="5"
+                            required></textarea>
                     </div>
                     <button class="btn btn-dark" id="submit" type="submit">Submit</button>
                 </form>
