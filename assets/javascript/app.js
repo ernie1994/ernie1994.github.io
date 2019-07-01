@@ -63,6 +63,7 @@ $(document).ready(function () {
                 .addClass("project-info col-12 col-md-6 text-center text-md-left")
                 .append("<br>")
                 .append($("<h2>")
+                    .addClass("project-title")
                     .html(proj.title))
                 .append($("<h6>")
                     .addClass("project-descr text-center text-md-left")
