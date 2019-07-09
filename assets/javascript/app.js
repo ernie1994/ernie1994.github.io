@@ -16,7 +16,7 @@ $(document).ready(function () {
             githubUrl: "https://github.com/ernie1994/gifTastic"
         },
         {
-            image: "cute-dog.jpg",
+            image: "event.jpg",
             title: "Event Me",
             description: "Plan your next fun event!",
             appUrl: "https://medricr.github.io/group-project/",
@@ -56,7 +56,7 @@ $(document).ready(function () {
                 .addClass("col-12 col-md-6 d-flex justify-content-center justify-content-md-end");
 
             var $img = $("<img>")
-                .addClass("img-fluid img-thumbnail")
+                .addClass("img-fluid img-thumbnail project-image")
                 .attr("src", "./assets/images/" + proj.image);
 
             var $projectInfo = $("<div>")

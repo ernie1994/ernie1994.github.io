@@ -83,6 +83,10 @@ h6 {
     height: 1px;
 }
 
+.project-image {
+    box-shadow: -10px -10px 10px 5px lightgray;
+}
+
 .project-descr {
     color: gray;
     font-family: 'Lato', sans-serif;
