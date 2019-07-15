@@ -89,7 +89,8 @@ h6 {
 .project-image {
     box-shadow: -10px -10px 10px 5px lightgray;
     width: 50%;
-    height:auto;
+    height: auto;
+    max-width: 100%;
 }
 
 .project-descr {
