@@ -2,6 +2,13 @@ $(document).ready(function () {
 
     var projects = [
         {
+            image: "fancy_dinner.jpg",
+            title: "Recipe List",
+            description: "Find something great to cook",
+            appUrl: "https://drinklist.herokuapp.com/",
+            githubUrl: "https://github.com/ernie1994/drinklist"
+        },
+        {
             image: "burger.png",
             title: "Eat-Da-Burger",
             description: "Pretend you're eating tasty burgers!",
@@ -99,8 +106,6 @@ $(document).ready(function () {
     }
 
     function setUpPage() {
-        $("#stars").height($("#stars").height() * 1.60);
-
         ["background-color", "border-color"].forEach((str) => {
             $("#html-tags").css(str, $("nav").css("background-color"));
         });
@@ -120,6 +125,18 @@ $(document).ready(function () {
     function hideNavMenu() {
         $(".navbar-collapse").collapse("hide");
     }
+
+    // $(window).resize(() => {
+    //     html = "";
+    //     if (window.innerWidth > 550) {
+    //         html = "My name is <strong>Ernesto Garcia</strong>.<br>I'm a Full Stack Developer.";
+    //     } else {
+    //         html = "<strong>Ernesto</strong><br>Full Stack Dev"
+    //     }
+    //     html = "My name is <strong>Ernesto Garcia</strong>.<br>I'm a Full Stack Developer.";
+
+    //     $("#myNameHeader").html(html);
+    // });
 
     $(".myWork").click(() => {
         window.scroll({

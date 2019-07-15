@@ -23,10 +23,15 @@ h1 {
 }
 
 #personal-pic {
-    width:150px;
-    height:150px;
+    width:250px;
+    height:250px;
     margin-bottom: 10%; 
     border-radius: 50%;
+}
+
+#mail {
+    width:100px;
+    height:100px;
 }
 
 #stars {
@@ -37,10 +42,12 @@ h1 {
 }
 
 #myWork {
-    text-align: center;
+    /* text-align: center;
     color:white;
     border-color: white;
-    background-color: black;
+    background-color: black; */
+    font-weight: bold;
+    border-color:black;
 }
 
 #contact {
@@ -85,6 +92,7 @@ h6 {
 
 .project-image {
     box-shadow: -10px -10px 10px 5px lightgray;
+    width: 50%;
 }
 
 .project-descr {
