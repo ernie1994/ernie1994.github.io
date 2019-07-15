@@ -42,10 +42,6 @@ h1 {
 }
 
 #myWork {
-    /* text-align: center;
-    color:white;
-    border-color: white;
-    background-color: black; */
     font-weight: bold;
     border-color:black;
 }
@@ -93,6 +89,7 @@ h6 {
 .project-image {
     box-shadow: -10px -10px 10px 5px lightgray;
     width: 50%;
+    height:auto;
 }
 
 .project-descr {

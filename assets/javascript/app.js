@@ -126,18 +126,6 @@ $(document).ready(function () {
         $(".navbar-collapse").collapse("hide");
     }
 
-    // $(window).resize(() => {
-    //     html = "";
-    //     if (window.innerWidth > 550) {
-    //         html = "My name is <strong>Ernesto Garcia</strong>.<br>I'm a Full Stack Developer.";
-    //     } else {
-    //         html = "<strong>Ernesto</strong><br>Full Stack Dev"
-    //     }
-    //     html = "My name is <strong>Ernesto Garcia</strong>.<br>I'm a Full Stack Developer.";
-
-    //     $("#myNameHeader").html(html);
-    // });
-
     $(".myWork").click(() => {
         window.scroll({
             top: $("#portfolio").offset().top - $("nav").height()
