@@ -120,6 +120,12 @@ $(document).ready(function () {
             left += "=" + width;
             $(element).css({ left: left });
         });
+
+        // $(".project-image").each((_index, element) => {
+        //     $(element).css({
+        //         height: $(element).w
+        //     })
+        // });
     }
 
     function hideNavMenu() {
@@ -135,6 +141,12 @@ $(document).ready(function () {
     $(".contact").click(() => {
         window.scroll({
             top: $("#contact").offset().top - $("nav").height()
+        });
+    });
+
+    $("#aboutMeNav").click(() => {
+        window.scroll({
+            top: $("#aboutMe").offset().top - $("nav").height() - 20
         });
     });
 
