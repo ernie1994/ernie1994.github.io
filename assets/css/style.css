@@ -87,11 +87,11 @@ h6 {
 }
 
 .project-image {
+    display: block;
     box-shadow: -10px -10px 10px 5px lightgray;
-    max-width: 50%;
-    max-height: 100%;
+    width: 50%;
     height: auto;
-    width: auto;
+    object-fit: contain;
 }
 
 .project-descr {
